@@ -4,7 +4,7 @@ import com.alokomkar.daggerexample.MainActivity
 import com.alokomkar.daggerexample.model.Car
 import dagger.Component
 
-@Component
+@Component (modules = [WheelsModule::class])
 interface CarComponent {
     fun getCar() : Car
     fun inject( mainActivity: MainActivity )

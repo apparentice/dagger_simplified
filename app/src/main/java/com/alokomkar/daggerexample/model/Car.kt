@@ -1,6 +1,7 @@
 package com.alokomkar.daggerexample.model
 
 import android.util.Log
+import com.alokomkar.daggerexample.model.lib_models.Wheels
 import javax.inject.Inject
 
 data class Car @Inject constructor( private val engine : Engine,
