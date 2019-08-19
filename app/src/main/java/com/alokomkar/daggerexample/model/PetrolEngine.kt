@@ -1,13 +1,12 @@
 package com.alokomkar.daggerexample.model
 
 import android.util.Log
-import javax.inject.Inject
 
-class PetrolEngine @Inject constructor() : Engine {
+class PetrolEngine constructor(private val horsePower: Int) : Engine {
 
     private val TAG = "PetrolEngine"
 
     override fun startEngine() {
-        Log.d(TAG, "Petrol engine started")
+        Log.d(TAG, "Petrol engine started : horse power : $horsePower")
     }
 }
