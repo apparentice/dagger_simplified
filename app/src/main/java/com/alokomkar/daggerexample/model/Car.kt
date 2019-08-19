@@ -12,11 +12,13 @@ data class Car @Inject constructor( private val engine : Engine,
 
     @Inject
     fun enableRemote( remote: Remote ) {
-        //Inject called here is automatically executed with no need to call this function explicitly
+        //Inject called here is automatically executed
+        //with no need to call this function explicitly
         remote.setListener(this)
     }
 
     fun drive() {
+        engine.startEngine()
         Log.d(TAG, "Start driving...")
     }
 }
