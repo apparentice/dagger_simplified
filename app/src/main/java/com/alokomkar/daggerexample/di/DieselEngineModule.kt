@@ -7,6 +7,12 @@ import dagger.Provides
 
 @Module
 class DieselEngineModule {
+
+    private var horsePower : Int = 0
+
+    @Provides
+    fun provideHorsePower() = horsePower
+
     @Provides
     fun provideEngine( dieselEngine : DieselEngine ) : Engine = dieselEngine
 }

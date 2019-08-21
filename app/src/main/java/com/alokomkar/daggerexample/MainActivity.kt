@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val carComponent: CarComponent = DaggerCarComponent.builder()
-            .petrolEngineModule(PetrolEngineModule(1000))
+            .horsePower(150)
             .build()
         carComponent.inject(this)
         car.drive()
